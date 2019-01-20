@@ -41,7 +41,12 @@ function total(){
   var result = 0;
 
   // Loop through those numbers and add them together to get a sum.
-  
+  for (var i = 0; i < data.length; i++){
+    if  (parseFloat(data[i])) {
+      results += parseFloat(data[i]);
+    }
+  }
+
 
 
 
