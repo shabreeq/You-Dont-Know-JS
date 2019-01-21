@@ -6,6 +6,11 @@ var wins = 0;
 var losses = 0;
 var ties = 0;
 
+var winsCount = document.getElementById("winsCount");
+var lossesCount = document.getElementById("lossesCount");
+var tiesCount = document.getElementById("tiesCount");
+
+
 // Make function for pressing keys "r", "p", "s"
 
 document.onkeyup = function(event){
@@ -15,9 +20,13 @@ document.onkeyup = function(event){
 
   if((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
 
-  console.log("User guess: " + userGuess);
+  // console.log("User guess: " + userGuess);
 
-  console.log("Computer guess: " + computerGuess);
+  // console.log("Computer guess: " + computerGuess);
+
+  // alert("User guess: " + userGuess);
+
+  alert("Computer guess: " + computerGuess);
 
   }
 
@@ -44,14 +53,12 @@ document.onkeyup = function(event){
   if(userGuess === "s" && computerGuess === "r"){
     losses++
     }
+
+    winsCount.textContent = "Wins: " +wins;
+    lossesCount.textContent = "Losses: " +losses;
+    tiesCount.textContent = "Ties: " + ties;
   
   }
-
-  console.log("Wins: " + wins);
-  console.log("Losses: " + losses);
-  console.log("Ties: " + ties);
-
-
 
 }
 
